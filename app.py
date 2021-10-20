@@ -156,7 +156,7 @@ if  option_53:
 st.header("Question 6")
 
 
-img1= Image.open("q6.jpg")
+img1= Image.open("Q6.jpg")
 st.image(img1)
 st.text(" \n")
 st.text(" \n")
