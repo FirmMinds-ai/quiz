@@ -241,7 +241,9 @@ st.text(" \n")
 
 st.header("Total Questions Answered")
 st.write(str(len(set(a))))
-st.write(str(set(a)))
+
+if len(set(a))>0:
+    st.write(str(set(a)))
 
 st.header("Total Answers given by the user")
 st.write(str(count))
