@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from PIL import Image
-
+import plotly.express as px
 
 count = 0
 a = []
@@ -247,3 +247,20 @@ if len(set(a))>0:
 
 st.header("Total Answers given by the user")
 st.write(str(count))
+
+import pandas as pd
+
+
+
+t = {1,2,3,4,5,6,7,8}
+A=  set(a)
+n =  t-A
+a1 = "TOTAL QUESTIONS ANSWERED : "+ str(A)
+a2 = "TOTAL QUESTIONS ARE NOT ANSWERED : "+str(n)
+df =pd.DataFrame([[a1,len(list(A))],[a2,len(list(n))]],columns = ["TYPE","VALUE"])
+print(df)
+
+fig = px.pie(df, values='VALUE', names='TYPE')
+st.plotly_chart(fig,use_container_width=10)
+S = "QUIZ MARKS: " + str((len(A)/8)*100)
+st.header(S)
