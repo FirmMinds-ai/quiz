@@ -255,8 +255,8 @@ import pandas as pd
 t = {1,2,3,4,5,6,7,8}
 A=  set(a)
 n =  t-A
-a1 = "TOTAL QUESTIONS ANSWERED : "+ str(A)
-a2 = "TOTAL QUESTIONS ARE NOT ANSWERED : "+str(n)
+a1 = "TOTAL QUESTIONS ANSWERED : "+ str(list(A))
+a2 = "TOTAL QUESTIONS ARE NOT ANSWERED : "+str(list(n))
 df =pd.DataFrame([[a1,len(list(A))],[a2,len(list(n))]],columns = ["TYPE","VALUE"])
 print(df)
 
