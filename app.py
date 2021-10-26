@@ -261,7 +261,7 @@ ans = ["You have a good personality",
 "You are a loving human",
 "You are  strong human being",
 "You have good nature"]
-c = crandom.choice(list1)
+c = random.choice(list1)
 fig = px.pie(df, values='VALUE', names='TYPE')
 st.plotly_chart(fig,use_container_width=15)
 
