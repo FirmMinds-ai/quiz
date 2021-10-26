@@ -236,17 +236,6 @@ if option_82 :
     a.append(8)
 
 
-st.text(" \n")
-st.text(" \n")
-
-st.header("Total Questions Answered")
-st.write(str(len(set(a))))
-
-if len(set(a))>0:
-    st.write(str(set(a)))
-
-st.header("Total Answers given by the user")
-st.write(str(count))
 
 import pandas as pd
 
@@ -275,5 +264,6 @@ ans = ["You have a good personality",
 
 fig = px.pie(df, values='VALUE', names='TYPE')
 st.plotly_chart(fig,use_container_width=15)
-S = "QUIZ MARKS: " + str((len(A)/8)*100)
-st.header(ans[random.choice(list1)])
+
+if st.button('FINAL RESULT'):
+    st.header(ans[random.choice(list1)])
