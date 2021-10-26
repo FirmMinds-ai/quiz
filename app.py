@@ -259,8 +259,21 @@ a1 = "TOTAL QUESTIONS ANSWERED : "+ str(list(A))
 a2 = "TOTAL QUESTIONS ARE NOT ANSWERED : "+str(list(n))
 df =pd.DataFrame([[a1,len(list(A))],[a2,len(list(n))]],columns = ["TYPE","VALUE"])
 print(df)
+import random
+list1 = [0,1, 2, 3, 4, 5, 6,7,8]
+
+
+ans = ["You have a good personality",
+"You  are a good human",
+"Your brain is fast",
+"Your are very emotional",
+"You are little sensitive",
+"You seem to be intelligent",
+"You are a loving human",
+"You are  strong human being",
+"You have good nature"]
 
 fig = px.pie(df, values='VALUE', names='TYPE')
-st.plotly_chart(fig,use_container_width=10)
+st.plotly_chart(fig,use_container_width=15)
 S = "QUIZ MARKS: " + str((len(A)/8)*100)
-st.header(S)
+st.header(ans[random.choice(list1)])
